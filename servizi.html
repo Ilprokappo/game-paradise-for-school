@@ -25,6 +25,39 @@
             font-weight: bold;
             text-align: center;
         }
+        .blue-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: blue; /* Bottone blu */
+            color: white; /* Testo bianco */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Pulsanti Sign Up e Sign In */
+        .auth-buttons {
+            position: absolute;
+            top: 20px;  /* Distanza dal bordo superiore */
+            right: 20px; /* Distanza dal bordo destro */
+            z-index: 10; /* Assicura che i pulsanti stiano sopra ad altri contenuti */
+        }
+
+        .auth-buttons .btn {
+            background: #1a73e8; /* Colore di sfondo blu */
+            color: white; /* Colore del testo */
+            padding: 10px 20px; /* Spaziatura interna dei pulsanti */
+            font-size: 16px; /* Dimensione del font */
+            text-decoration: none; /* Rimuove la sottolineatura */
+            border-radius: 5px; /* Bordo arrotondato */
+            margin-left: 10px; /* Spazio tra i pulsanti */
+            transition: background-color 0.3s ease; /* Effetto di transizione per il hover */
+        }
+
+        .auth-buttons .btn:hover {
+            background: #1558b0; /* Colore di sfondo quando si passa sopra il pulsante */
+        }
     </style>
 </head>
 <body>
@@ -35,9 +68,13 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="chi_siamo.html">Chi Siamo</a></li>
                 <li><a href="servizi.html">Servizi</a></li>
-                <li><a href="snake_game.html">Snake Game</a></li>
             </ul>
         </nav>
+        <!-- Aggiunta dei pulsanti Sign Up e Sign In -->
+        <div class="auth-buttons">
+            <a href="signup.html" class="btn">Sign Up</a>
+            <a href="signin.html" class="btn">Sign In</a>
+        </div>
     </header>
 
     <section id="servizi">
@@ -47,10 +84,16 @@
         <div style="text-align: center;">
             <a href="snake_game.html" class="play-button">GIOCA ORA!</a>
         </div>
+
+        <h3 class="snake-game-title">GUESS THE NUMBER</h3>
+        <div style="text-align: center;">
+            <p>Prova a indovinare il numero scelto tra 1 e 100!</p>
+            <a href="indovina_il_numero.html" class="blue-button">GIOCA ORA</a>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Il Tuo Sito Web. Tutti i diritti riservati.</p>
+        <p>&copy; 2024 Game paradise for school. Tutti i diritti riservati.</p>
     </footer>
 </body>
 </html>

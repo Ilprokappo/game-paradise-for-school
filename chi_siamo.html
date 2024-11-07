@@ -5,6 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi Siamo - Il Tuo Sito Web</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .snake-game-title {
+            text-align: center;
+            font-weight: bold;
+            background: linear-gradient(to right, rgb(144, 238, 144), rgb(0, 128, 0)); /* Verde chiaro a scuro */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .play-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: yellow; /* Bottone giallo */
+            color: orange; /* Testo arancione */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .blue-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: blue; /* Bottone blu */
+            color: white; /* Testo bianco */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Pulsanti Sign Up e Sign In */
+        .auth-buttons {
+            position: absolute;
+            top: 20px;  /* Distanza dal bordo superiore */
+            right: 20px; /* Distanza dal bordo destro */
+            z-index: 10; /* Assicura che i pulsanti stiano sopra ad altri contenuti */
+        }
+
+        .auth-buttons .btn {
+            background: #1a73e8; /* Colore di sfondo blu */
+            color: white; /* Colore del testo */
+            padding: 10px 20px; /* Spaziatura interna dei pulsanti */
+            font-size: 16px; /* Dimensione del font */
+            text-decoration: none; /* Rimuove la sottolineatura */
+            border-radius: 5px; /* Bordo arrotondato */
+            margin-left: 10px; /* Spazio tra i pulsanti */
+            transition: background-color 0.3s ease; /* Effetto di transizione per il hover */
+        }
+
+        .auth-buttons .btn:hover {
+            background: #1558b0; /* Colore di sfondo quando si passa sopra il pulsante */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,6 +70,11 @@
                 <li><a href="servizi.html">Servizi</a></li>
             </ul>
         </nav>
+        <!-- Aggiunta dei pulsanti Sign Up e Sign In -->
+        <div class="auth-buttons">
+            <a href="signup.html" class="btn">Sign Up</a>
+            <a href="signin.html" class="btn">Sign In</a>
+        </div>
     </header>
 
     <section id="chi-siamo">
@@ -33,7 +92,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Il Tuo Sito Web. Tutti i diritti riservati.</p>
+        <p>&copy; 2024 Game paradise for school. Tutti i diritti riservati.</p>
     </footer>
 </body>
 </html>

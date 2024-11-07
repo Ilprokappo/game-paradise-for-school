@@ -1,18 +1,40 @@
+/* Body - Sfondo in stile gioco */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Gradiente ispirato ai giochi retro */
+    background-size: cover; /* Copre l'intera pagina */
 }
 
+/* Header - Sfondi neon retro */
 header {
-    background: #333;
+    background: #333 url('https://img.freepik.com/free-vector/pink-grid-neon-patterned-background_53876-114920.jpg?semt=ais_hybrid') no-repeat center center;
     color: #fff;
     padding: 10px 0;
+    background-size: cover; /* Copre l'intera area dell'header */
+    text-align: center;
 }
 
+/* Logo - Effetto gradiente neon (rimosso in HTML ma lasciato per riferimenti) */
+.logo {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(0, 128, 0);
+    text-align: center;
+    background: linear-gradient(to right, rgb(144, 238, 144), rgb(0, 128, 0)); /* Gradiente verde */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Effetto di ombra per un look più dinamico */
+}
+
+/* Navigazione (Nav) - Sfondo pixel e hover neon */
 nav {
-    text-align: center; /* Centra il contenuto del nav */
+    background: #000 url('https://static.vecteezy.com/system/resources/thumbnails/012/678/563/small_2x/abstract-futuristic-gaming-background-overlay-for-copy-space-metal-plate-wallpaper-for-live-streaming-monitor-display-vector.jpg') repeat;
+    text-align: center;
+    padding: 10px 0;
 }
 
 nav ul {
@@ -22,7 +44,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; /* Cambia display da inline a inline-block per centrare */
+    display: inline-block; /* Centra i link */
     margin-right: 20px; /* Distanza tra i link */
 }
 
@@ -30,33 +52,90 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold; /* Rende il testo in grassetto */
+    transition: color 0.3s ease;
 }
 
-.logo {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 2em; /* Puoi cambiare la dimensione del font se necessario */
-    color: rgb(0, 128, 0); /* Verde scuro */
-    text-align: center;
-    background: linear-gradient(to right, rgb(144, 238, 144), rgb(0, 128, 0)); /* Verde chiaro a scuro */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 10px 0; /* Padding per un po' di spazio attorno al logo */
+nav ul li a:hover {
+    color: #2a5ac0; /* Colore neon quando il mouse passa sopra */
+    animation: neonPulse 1.5s infinite; /* Animazione neon */
 }
 
+/* Sezione - Sfondo pixel + overlay scuro */
 section {
     padding: 20px;
     margin: 20px;
-    background: #fff;
-    border-radius: 5px;
+    background: url('') repeat, rgba(0, 0, 0, 0.7); /* Sfondo pixel + overlay scuro */
+    border-radius: 10px;
+    color: #fff; /* Testo bianco per contrasto */
 }
 
+/* Footer - Gradiente scuro */
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #333;
+    background: linear-gradient(180deg, #1a1a1a, #0d0d0d); /* Gradiente scuro */
     color: #fff;
     position: relative;
     bottom: 0;
     width: 100%;
+    margin-top: 50px; /* Distanza dal contenuto sopra */
+}
+
+/* Animazione Neon Pulse */
+@keyframes neonPulse {
+    0% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    }
+    50% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    }
+    100% {
+        text-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 30px #0000ff;
+    }
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    nav ul li {
+        margin-right: 10px; /* Distanza più piccola sui dispositivi mobili */
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px; /* Spazio ridotto sulle piccole schermate */
+    }
+}
+
+/* Stili per i pulsanti Sign Up / Sign In */
+.auth-buttons {
+    position: absolute;
+    top: 20px;  /* Distanza dal bordo superiore */
+    right: 20px; /* Distanza dal bordo destro */
+    z-index: 10; /* Assicura che i pulsanti stiano sopra ad altri contenuti */
+}
+
+.auth-buttons .btn {
+    background: #1a73e8; /* Colore di sfondo blu */
+    color: white; /* Colore del testo */
+    padding: 10px 20px; /* Spaziatura interna dei pulsanti */
+    font-size: 16px; /* Dimensione del font */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    border-radius: 5px; /* Bordo arrotondato */
+    margin-left: 10px; /* Spazio tra i pulsanti */
+    transition: background-color 0.3s ease; /* Effetto di transizione per il hover */
+}
+
+.auth-buttons .btn:hover {
+    background: #1558b0; /* Colore di sfondo quando si passa sopra il pulsante */
+}
+
+/* Stili per il header */
+header h1 {
+    font-size: 2.5em;
+}
+
+/* Stili per il footer */
+footer p {
+    margin: 0;
+    font-size: 14px;
 }
